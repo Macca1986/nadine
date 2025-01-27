@@ -33,15 +33,70 @@ const messages = [
     "Helping you get your weights at the gym and put them on the bar.",
     "The way you sometimes try to pull faces that would 'scare' me, but they are hilarious.",
     "Listening to your advice on anything in my life, such as how to deal with colleagues.",
-    "Anticipating your arrival at my house, looking out from the laundry so I know when to come and open your car door for you."
+    "Anticipating your arrival at my house, looking out from the laundry so I know when to come and open your car door for you.",
+    "Surprising you with small gifts that I think will be useful in your life.",
+    "The way you encourage me and inspire me to do better in all aspects of life.",
+    "Baking you ANZAC cookies and feeding them to each other bite by bite, and you calling them AZNAC!.",
+    "Introducing you to my family and friends, always knowing they will absolutely love you.",
+    "I love you so incredibly deeply Nadine, I'm so blessed and hope to share a lifetime with you."
 ];
 
-let currentIndex = 0;
+const photos = [
+    "photo1.jpeg",
+    "photo2.jpeg",
+    "photo3.jpeg",
+    "photo4.jpeg",
+    "photo5.jpeg",
+    "photo6.jpeg",
+    "photo7.jpeg",
+    "photo8.jpeg",
+    "photo9.jpeg",
+    "photo10.jpeg",
+    "photo11.jpeg",
+    "photo12.jpeg",
+    "photo13.jpeg",
+    "photo14.jpeg",
+    "photo15.jpeg",
+    "photo16.jpeg",
+    "photo17.jpeg",
+    "photo18.jpeg",
+    "photo19.jpeg",
+    "photo20.jpeg",
+    "photo21.jpeg",
+    "photo22.jpeg",
+    "photo23.jpeg",
+    "photo24.jpeg",
+    "photo25.jpeg",
+    "photo26.jpeg",
+    "photo27.jpeg",
+    "photo28.jpeg",
+    "photo29.jpeg",
+    "photo30.jpeg",
+    "photo31.jpeg",
+    "photo32.jpeg",
+    "photo33.jpeg",
+    "photo34.jpeg",
+    "photo35.jpeg",
+    "photo36.jpeg",
+    "photo37.jpeg",
+    "photo38.jpeg",
+    "photo39.jpeg"
+];
 
-const card = document.getElementById('card');
+let currentMessageIndex = 0;
+let currentPhotoIndex = 0;
+
+const messageCard = document.getElementById('messageCard');
+const photoCard = document.getElementById('photoCard');
 const content = document.getElementById('content');
+const photo = document.getElementById('photo');
 
-card.addEventListener('click', () => {
-    currentIndex = (currentIndex + 1) % messages.length;
-    content.textContent = messages[currentIndex];
+photo.src = photos[0];
+
+messageCard.addEventListener('click', () => {
+    currentMessageIndex = (currentMessageIndex + 1) % messages.length;
+    content.textContent = messages[currentMessageIndex];
+
+    currentPhotoIndex = (currentPhotoIndex + 1) % photos.length;
+    photo.src = photos[currentPhotoIndex];
 });
