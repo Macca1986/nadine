@@ -20,13 +20,18 @@ body {
 
 .card {
     background: rgba(255, 255, 255, 0.1);
-    padding: 20px 30px;
+    width: 300px;
+    height: 300px;
+    padding: 20px;
     border-radius: 20px;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(10px);
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .card:hover {
@@ -38,4 +43,5 @@ body {
     margin: 0;
     font-size: 1.5rem;
     font-weight: bold;
+    word-wrap: break-word;
 }
